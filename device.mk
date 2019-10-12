@@ -8,7 +8,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     framework-res
 
 # ARCore
-TARGET_INCLUDE_STOCK_ARCORE := true
+PRODUCT_PACKAGES += \
+    arcore
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/android.hardware.camera.ar.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.ar.xml
@@ -232,7 +233,6 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    copybit.msm8953 \
     gralloc.msm8953 \
     hwcomposer.msm8953 \
     memtrack.msm8953 \
